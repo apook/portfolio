@@ -1,0 +1,165 @@
+
+/*block level elements*/
+	body{
+		background-color:#ff8000;
+	}
+	div{
+		padding:10px;
+	}
+	h1{
+		font:bold small-caps 2.5em Gourgia,serif;
+		color:white;
+	}
+	h2{
+		color:white;
+	}
+	p{	
+		font: 0.9em/2.8em Arial,Verdana;
+	}
+	img{
+		float:right;
+		width:15%;
+	}
+	span{
+		font:italic bold 1.5em Georgia, serif; 
+	}
+	table{
+		border:4px double red;
+		caption-side:bottom;
+		margin:0 auto;
+	}
+	th, td{
+		padding:10px;
+		border-bottom:1px solid #600;
+		border-right:1px solid #6f0;
+		text-align:left;	
+	}
+	
+	
+/*Styling the navigation*/
+	#nav  a:link{
+		color:red;
+	}
+	#nav a:visited {
+		color: green;
+	}
+	#nav a:hover, #nav a:focus {
+		text-decoration: underline;	
+	}
+	#nav a:active{
+		color:black;
+	}
+	#nav{
+		text-align:center;
+	}
+	
+	#nav a{
+		background-color:#ffe6e6;
+		font-weight:bold;
+		font-size:1.1em;
+		border:1px solid #000;
+		padding:5px;
+		margin:0 auto;/*make it even and center it*/
+		text-decoration:none;
+	}
+	
+/*id selectors*/
+
+	#wrapper{
+		margin: 50px 50px; 
+		background:#FC9;
+		border:10px;
+	}
+	#header{
+		text-align:center;
+		background-image:url("images/bridge.jpg");
+		background-repeat: no-repeat;
+		padding:60px;
+		background-position: center;
+	}
+	
+	#content{
+		padding:0.25px; 
+	}
+	#footer{
+		font-size:0.75em;
+		padding: 5px 0;
+		text-align:center;
+		background:#F8E0EC;
+		border-top:1px solid #000;
+	}
+	
+/*Descendent Selector*/	
+	#footer a{
+		text-decoration:none;
+	}
+
+
+	#content caption{
+		text-align:left;
+		font-weight:bold;
+		margin-bottom:.3em;
+	}
+	#content tr{
+		vertical-align:baseline;/*baseline adjust all the lines to same level for good readablity*/	
+	}
+	#content th{
+		font-size:1.2em;
+	}
+	#content tfoot{
+		font-size:0.7em;
+		text-align:right;
+		color:#068;
+	}
+	#footer a:link{
+		color:#600;
+	}
+	#footer a:hover, #footer a:focus{
+		text-decoration:underline;
+	}
+
+/* class selectors*/	
+	.special{
+		font:0.75em Verdana,Arial,sans-serif;
+		border:1px solid #600;/*border-width:1px;border-style:solid;border-color:red;*/
+		border-bottom:5px solid #F4FA58;/*border-bottom-width:10px;border-bottom-color:#600;border-bottom-style:solid;*/
+		margin:1px;
+		background:#F6E3CE;
+		width:41% ;
+		float:left;/*moves the text paragraph beside th special class <p>*/
+		padding:8px;/*top right bottom left*/;/*inner part of border/margin*/
+	}
+
+	.special > span {
+		display:inline-block;     
+		padding:1px;
+		font-size:0.75em;
+		margin:8px;
+	}
+	.special > img{
+		width:80%;
+		float:left;
+		border-width:3px;
+		border-style:solid;
+		padding:5%;
+		
+	}
+	.last{
+		padding:1px;
+		border:none;
+	}
+	
+	
+
+/*pseudo elements*/
+	td:first-of-type{
+		background-color:#A9A9F5;
+	}
+	th,td:first-child{
+		background-color:#F7819F;
+	}
+	tr:hover {
+		color:#fff;
+		background:#FA5882;
+	}
+	

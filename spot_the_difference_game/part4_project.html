@@ -1,0 +1,87 @@
+<html>
+	<head>
+		<title> Matching Game </title>
+		<meta charset=UTF-8">
+		<meta name="author" content="Apoorva">
+			<style type="text/css">
+				img{
+					position:absolute;
+				}
+				div{
+					position:absolute
+				}
+				#leftSide{
+					width:500px;
+					height:500px;
+				}
+				#rightSide{
+					width:500px;
+					height:500px;
+					left: 500px; 
+					border-left: 1px solid black;
+				}
+			</style>
+
+	<script>
+		//declare variables
+		var numberOfFaces = 5;
+		function generateFaces(){
+			//console.log("generateFaces: " + numberOfFaces);
+			
+			var theLeftSide= document.getElementById("leftSide");
+
+			for(var i=0; i < numberOfFaces;i++){
+				var x = document.createElement("img");
+				x.setAttribute("src","smile.png");
+				x.alt = "smiling face";
+				//generate randome nos for top and left position of the images
+				x.style.top=Math.floor(Math.random()*401); +"px";
+				x.style.left=Math.floor(Math.random()*401);+"px";
+				theLeftSide.appendChild(x);
+			}
+
+			//right side
+			var theRightSide = document.getElementById("rightSide");
+
+			imageCopies = theLeftSide.cloneNode(true);
+			imageCopies.removeChild(imageCopies.lastChild); 
+			theRightSide.appendChild(imageCopies);
+
+			//when ans is correct
+			theLeftSide.lastChild.onclick = nextLevel;
+		}
+		
+		function nextLevel(event){
+			event.stopPropagation();
+												
+			//remove all child node after getting correct ans
+			var theLeftSide= document.getElementById("leftSide");
+			while (theLeftSide.firstChild) {
+				theLeftSide.removeChild(theLeftSide.firstChild);
+			}
+			var theRightSide = document.getElementById("rightSide");
+			while (theRightSide.firstChild) {
+				theRightSide.removeChild(theRightSide.firstChild);
+			}
+
+			numberOfFaces += 5;
+			generateFaces();
+
+		}
+		
+		//body
+		function gameOver() {
+			alert("Game Over!");
+			document.getElementById("theBody").onclick = null;//from now onwards nothing will happen when the user clicks anywhere in the web page
+			document.getElementById("leftSide").lastChild.onclick = null;//from now onwards nothing will happen when the user clicks on the extra face.
+		}
+	</script>
+	
+	</head>
+	<body id="theBody" onload="generateFaces()" onclick="gameOver()">
+		<h1>Matching Game</h1>
+		<p>Click on the extra smiling face on the left</p>
+		<div id="leftSide"></div> 
+		<div id="rightSide"></div> 
+	</body>
+</html>

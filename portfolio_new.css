@@ -1,0 +1,511 @@
+body{
+	background-size: auto;
+	font-family: sans-serif;
+}
+html,body, header{
+	background-image:url(images/bkimg.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+#footer{
+	color:#000;
+	font-size:0.90em;
+	font-style:italic;
+	background-color:#d7d7d7;
+	margin:2%;
+}
+.transparentbox {
+	width:80%;
+    margin: 2%;
+	padding: 2%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	border: 1px solid #d7d7d7;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;	
+}
+.intro{
+	font-weight:lighter	;
+	line-height:1.5;
+}
+#profileimg img{
+	display:inline-block;
+	position: absolute;
+    left: 75%;
+    top: 55%;
+	border:4px solid black;
+	border-radius:50%;
+}
+.gradient{
+	background: rgb(240,183,161);
+	background: -moz-radial-gradient(center, ellipse cover,  rgba(240,183,161,1) 0%, rgba(140,51,16,1) 50%, rgba(117,34,1,1) 51%, rgba(191,110,78,1) 100%);
+	background: -webkit-radial-gradient(center, ellipse cover,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+	background: radial-gradient(ellipse at center,  rgba(240,183,161,1) 0%,rgba(140,51,16,1) 50%,rgba(117,34,1,1) 51%,rgba(191,110,78,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0b7a1', endColorstr='#bf6e4e',GradientType=1 );
+}
+/*---------------------------------------- animation -------------------------------------*/
+
+ .threed:hover
+{
+        box-shadow:
+                1px 1px #53a7ea,
+                2px 2px #53a7ea,
+                3px 3px #53a7ea;
+        -webkit-transform: translateX(-3px);
+        transform: translateX(-3px);
+}
+.border:hover
+{
+    box-shadow: inset 0 0 0 25px #53a7ea;
+}
+/*---------------------------- nav --------------------------------------------------------------------*/
+#nav > a
+    {
+        display: none;
+    }
+/*First hide the sub menus by targeting any ULâ€™s within a UL with the display:none*/
+nav ul ul {
+	display: none;
+}
+
+	nav ul li:hover > ul{
+		display: block;
+	}
+	
+	
+/*style up the main navigation menu*/	
+nav ul {
+	background: brown;
+	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
+	padding: 0 20px;
+	border-radius: 10px;  
+	list-style: none;
+	position: relative;
+	display: inline-table;
+}
+nav ul:after {
+	content: "";
+	clear: both;
+	display: block;
+}
+
+/*individual menu items styled*/
+nav ul li {
+	float: left;
+}
+	nav ul li:hover {
+		background: #4b545f;
+		background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
+		background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+	}
+		nav ul li:hover a {
+			color: #fff;
+		}
+	
+	nav ul li a {
+		color:#fff;
+		display: block;
+		padding: 25px 40px;
+		text-decoration: none;
+	}
+/*styled up the sub menus */	
+nav ul ul {
+	background: #5f6975;
+	border-radius: 0px;
+	padding: 0;
+	position: absolute;
+	top: 100%;
+}
+	nav ul ul li {
+		float: none; 
+		border-top: 1px solid #6b727c;
+		border-bottom: 1px solid #575f6a;
+		position: relative;
+	}
+		nav ul ul li a {
+			padding: 15px 40px;
+			color: #fff;
+		}	
+			nav ul ul li a:hover {
+				background: #4b545f;
+				}
+/*position the sub-sub-menus*/
+nav ul ul ul {
+	position: absolute;
+	left: 100%;
+	top:0;
+}
+/*---------------------------------------- Photo Gallery ----------------------------------------*/
+
+
+#container {
+	width: 600px; 
+	margin: 40px auto;
+}
+
+#container h1 {
+	font: bold 65px/60px Helvetica, Arial, Sans-serif;
+	text-align: center;
+	color:#eee;
+	text-shadow: 0px 2px 6px #333;
+}
+
+ul.gallery { 
+	list-style: none;
+
+}
+ul.gallery li a {
+	position: relative;
+	float: left;
+	padding: 10px 10px 25px 10px;
+	background: #eee;
+	border: 1px solid #fff;
+	-moz-box-shadow: 0px 2px 15px #333;
+}
+	
+	ul.gallery li a.pic-1 {
+		z-index: 1;
+		-webkit-transform: rotate(-10deg);
+ 		-moz-transform: rotate(-10deg);
+	}
+	ul.gallery li a.pic-2 {
+		z-index: 5;
+		-webkit-transform: rotate(-3deg);
+ 		-moz-transform: rotate(-3deg);
+	}
+	ul.gallery li a.pic-3 {
+		z-index: 3;
+		-webkit-transform: rotate(4deg);
+ 		-moz-transform: rotate(4deg);
+	}
+	ul.gallery li a.pic-4 {
+		z-index: 4;
+		-webkit-transform: rotate(14deg);
+ 		-moz-transform: rotate(14deg);
+	}
+	ul.gallery li a.pic-5 {
+		z-index: 2;
+		-webkit-transform: rotate(-12deg);
+ 		-moz-transform: rotate(-12deg);
+	}
+	ul.gallery li a.pic-6 {
+		z-index: 6;
+		-webkit-transform: rotate(5deg);
+ 		-moz-transform: rotate(5deg);
+	}
+	
+	ul.gallery li a:hover {
+		z-index: 10;
+		border:3px solid blue;
+		-moz-box-shadow: 3px 5px 15px #333;
+	}
+/*----------------------------------------- form ---------------------------------------------- */
+form{
+	margin:20%;
+}
+#contact > .transparentbox {
+	width:50%;
+	position:relative;
+}
+.center {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+}
+.comtact_form label{
+	width:150px;
+	margin-top:3px;
+	display:inline-block;
+	float:left;
+	padding:3px;
+}
+.contact_form input{
+	height:20px;
+	width:220px;
+	padding:5px 8px;
+}
+#contact{
+	position:center;
+	margin:10%;
+}
+#head{
+	background-color: #4180C5;
+	text-align: center;
+	padding-top: 12px;
+	margin-top: -11px;
+	margin-bottom: -8px;
+	border-radius: 10px 10px 0 0;
+	color: aliceblue;
+}
+
+textarea{
+	width:95%;
+	padding: 2%;
+	margin-top: 10px;
+	border:1px solid #7ac9b7;
+	border-radius:5px;
+	margin-bottom: 20px;
+	resize:none;
+}
+/* Makes responsive fields. Sets size and field alignment*/
+input[type=text],input[type=email],input[type=url]{
+	margin-bottom: 20px;
+	margin-top: 10px;
+	width:95%;
+	border-radius:5px;
+	border:1px double #000;
+}
+
+input[type=submit]{
+	margin-bottom: 5%;
+	width:100%;
+	padding: 2%;
+	border-radius:5px;
+	border:1px solid #7ac9b7;
+	background-color: #4180C5;
+	color: aliceblue;
+	font-size:15px;
+	cursor:pointer;
+}
+
+
+#contact{
+	width: 55%;
+	margin: 10px 30% 10px 25%;
+	padding:10px 0;
+	border: 2px solid gray;
+	border-radius:10px;
+}
+
+#submit:hover{
+	background-color: black;
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,textarea:focus {
+	border-color: #4697e4;
+}
+/* -------------------------------Form validation ----------------------------------------------*/
+/* style your placeholder text you will need to use browser prefixes.*/
+	:-moz-placeholder { color: blue; }
+	::-webkit-input-placeholder { color: blue; }
+/* Remove input autofocus webkit */
+	*:focus {outline: none;} 
+/* Form Typography */
+	body {
+	font: 14px/21px "Lucida Sans", "Lucida Sans Unicode", sans-serif;
+	}
+	.contact_form h2, .contact_form label {
+	font-family:Georgia, Times, "Times New Roman", serif;
+	}
+	.form_hint, .required_notification {
+	font-size: 11px;
+	} 
+/* style required header*/
+	.contact_form h2 {
+	 margin:0;
+	 display: inline;
+	}
+	.required_notification {
+	 color:#d45252;
+	 margin:5px 0 0 0;
+	 display:inline;
+	 float:right;
+	}
+/* add red asteric to required */
+	input:required{
+		background: #fff url(images/red_asterisk.png) no-repeat 98% center;
+	}
+/* when a field is considered invalid by the browser */
+	.contact_form input:focus:invalid {
+		 background: #fff url(images/invalid.png) no-repeat 98% center;
+		 box-shadow: 0 0 5px #d45252;
+		 border-color: #b03535;
+	}
+/* when a field is considered valid by the browser */
+	.contact_form input:required:valid ,contact_form input:valid{
+		 background: #fff url(images/valid.png) no-repeat 98% center;
+		 box-shadow: 0 0 5px #5cd053;
+		 border-color: #28921f;
+	}
+/*Styling Form Field hints*/
+	.form_hint {
+		 background: #d45252;
+		 border-radius: 3px 3px 3px 3px;
+		 color: white;
+		 margin-left:40%;
+		 padding: 1px 6px;
+		 z-index: 999; /* hints stay above all other elements */
+		 position: absolute; /* allows proper formatting if hint is two lines */
+		 display: none;
+	}
+/*create and position arrow */
+	.form_hint::before {
+		 content: "\25C0"; /* left point triangle in escaped unicode */
+		 color:#d45252;
+		 position: absolute;
+		 top:1px;
+		 left:-6px;
+	}
+/* CSS adjacent selector to show and hide our form field hints*/
+	.contact_form input:focus + .form_hint{
+		display:inline;
+	}	
+/* change form hint color when valid */
+	.contact_form input:required:valid + .form_hint{
+		background:#28921f;
+	}
+/* change form hint arrow color when valid */	 
+	.contact_form input:required:valid + .form_hint::before{
+		color:#28921f;
+	}
+	::-webkit-validation-bubble-message{
+		padding:1em;
+	}			
+/* ------------------------------ media query ----------------------------------------------- */
+@media only screen and ( max-width: 1000px ){
+	#nav{
+		width: 100%;
+		position: static;
+		margin: 0;
+		}
+	#profileimg img{
+		left: 65%;
+		top: 75%;
+		}
+}
+@media screen and (max-width:640px){
+	#nav
+	{
+		position: relative;
+    }
+	#nav > a
+        {}
+    #nav:not( :target ) > a:first-of-type,
+    #nav:target > a:last-of-type
+        {
+		display: block;
+    }
+ 
+    /* first level */
+ 
+    #nav > ul
+	{
+        height: auto;
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+	#nav:target > ul
+        {
+		display: block;
+    }
+	#nav > ul > li
+        {
+		width: 100%;
+		float: none;
+	}
+ 
+    /* second level */
+    #nav li ul
+	{
+        position: static;
+    }
+	#profileimg img{
+		left: 75%;
+		top: 85%;
+	}
+
+@media screen and (max-width:600px){
+	
+	/*form*/
+	h2{
+		font-size:16px;
+	}
+	p{
+		font-size:14px;
+	}
+	label{
+		font-size:12px;
+	}
+	input[type=submit]{
+		padding:5px;
+	}
+	input[type=text]{
+		padding: 8px;
+	}
+	#head{
+		background-color:rgb(000, 51, 255);
+		padding-top: 2%;
+		margin-top:0;
+	}
+	#contact{
+		width: 80%;
+		margin: 10px 30% 10px 11%;
+	}
+	/*photo gallery*/
+	#container {
+		width: 400px; 
+		margin: 25px auto;
+	}
+	/*profile pic*/
+	#profileimg img{
+		left: 65%;
+		top: 85%;
+	}
+}
+
+@media screen and (max-width:350px){
+	/*nav*/
+	nav{
+		opacity:0.7;
+	}
+	/*form*/
+	input[type=submit]
+	{
+		padding:4px;
+		font-size:12px;
+	}
+	input[type=text]{
+		padding: 8px;
+	}
+	label{
+		font-size:12px;
+	}
+	h2{
+		font-size:15px;
+	}
+	p{
+		font-size:12px;
+	}
+	#head{
+		background-color:rgb(153, 51, 255);
+		padding-top:2%;
+		margin-top:0;
+	}
+	#contact{
+		width: 80%;
+		margin: 10px 30% 10px 11%;
+	}
+	.form_hint, .required_notification {
+		font-size: 12px;
+		display:inline;
+	}
+	
+	/*photo gallery*/
+	#container {
+		width: 300px; 
+		margin: 20px auto;
+	}
+	/*profile pic*/
+	#profileimg img{
+		display:none;
+	}
+}

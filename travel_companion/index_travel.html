@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Travel companion</title>
+		<meta name="description" content="Traveling with a companion or guide to relaxed and excellent travel experince">
+		<meta name="keywords" content="Travel companion, guided travel, relax journey">
+		<meta name ="robots" content="index">
+		<link href="index_travel_style.css" rel="stylesheet" type="text/css" media="screen">
+		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--html5shiv Dealing with IE 6, 7 and 8 (and sometimes 9!): -->
+		<!--[if lt IE 9]>
+		<script src="dist/html5shiv.js"></script>
+		<![endif]-->
+		<script>
+			function navFunction() {
+			document.getElementsByClassName("topnav")[0].classList.toggle("responsive");
+			}
+	
+			function msg() {
+			alert("Sorry the website is not ready yet. work is in process!");
+			}
+		</script>
+	</head>
+	<body class="gradient">
+		<div id="wrapper">
+		
+		<header id="header" role="banner"><!-- Header HTML5	– Structure	and	Accessibility – WAI-ARIA--> 
+			<nav role="navigation">  	
+				<ul id="nav" class="topnav">
+					<li><a href="index_travel.html">Home</a></li>
+					<li><a href="media_travel.html">Media</a></li>
+					<li><a href="map_travel.html">About me</a></li>
+					<li><a href="contact_travel.html">Contact</a></li>
+					<li><a href="#" id="login">Login</a></li>
+					<li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="navFunction()">☰</a></li>
+				</ul> 
+			</nav>
+			
+			<div>
+				<h1>Travel Companion</h1>
+				<h2>Have a happy and relaxed journey!</h2>
+			</div>
+			<div id="aeroplane" class="animation"><img src="images/aeroplane1.png" alt="aeroplane"></div>
+			
+		</header>
+
+		
+		<main>
+			
+			<form action="#" method="post" class="transparentbox">
+			<div id="head">
+				<b>Fillout the following form for desired Arrival and Destination location and explore who could be your travel companion!</b>
+				<br>
+				<span class="required_notification"><small>* Denotes Required Field</small></span> 
+			</div>
+			<fieldset>
+				<legend>General Information</legend>
+				<label for="from">from:</label>
+					<input type="text" id="from" name="from" autofocus required aria-required="true" title="Please Enter From Airport."> *
+				
+				<label for="from">to:</label>
+					<input type="text" id="to" name="to" required aria-required="true" title="Please Enter From Airport."> *
+				<br>
+<!-- "for date" and "for week" was giving validation error as "attribute of the label element must refer to a non-hidden form control."-->	
+				<label>Date:</label>
+					<input type="date" name="date" id="name">
+				
+				
+				<!--<select id="datebetween">
+                        <option value="1W">+ - 1 Week</option>
+						<option value="2W">+ - 2 Weeks</option>
+						<option value="3W">+ - 3 Weeks</option>
+						<option value="4W">+ - 4 Weeks</option>
+                    </select>-->
+					
+				<label>Select a week:</label>
+				<input type="week" name="year_week" id="year_week">
+				<br>
+				
+				<label for="from">Language:</label>
+					<select id="language" name="language">
+						<option value="">Select</option>
+						<option value="English">English</option>
+						<option value="Spanish">Spanish</option>
+						<option value="French">French</option>
+						<option value="Hindi">Hindi</option>
+						<option value="Assamese">Assamese</option>
+						<option value="Bengali">Bengali</option>
+						<option value="Dogri">Dogri</option>
+						<option value="Gujarati">Gujarati</option>
+						<option value="Kannada">Kannada</option>
+						<option value="Konkani">Konkani</option>
+						<option value="Malayalam">Malayalam</option>
+						<option value="Manipuri">Manipuri</option>
+						<option value="Marathi">Marathi</option>
+						<option value="Nepali">Nepali</option>
+						<option value="Oriya">Oriya</option>
+						<option value="Punjabi">Punjabi</option>
+						<option value="Sindhi">Sindhi</option>
+						<option value="Telugu">Telugu</option>
+						<option value="Tamil">Tamil</option>
+						<option value="Urdu">Urdu</option>
+					</select>
+				
+				
+				<label for="from">Airline:</label>
+					<select id="airline" name="airline">
+						<option value="">Select</option>
+						<option value="Aeroflot Airline">Aeroflot Airline</option>
+						<option value="Air Astana">Air Astana</option>
+						<option value="Air Canada">Air Canada</option>
+						<option value="Air France">Air France</option>
+						<option value="Air India">Air India</option>
+						<option value="Air Mauritius">Air Mauritius</option>
+						<option value="Alitalia">Alitalia</option>
+						<option value="Ariana Afghan Airline">Ariana Afghan Airline</option>
+						<option value="Asiana Airlines">Asiana Airlines</option>
+						<option value="Austrian Airlines">Austrian Airlines</option>
+						<option value="Bellview Airlines">Bellview Airlines</option>
+						<option value="Biman Bangladesh Airlines">Biman Bangladesh Airlines</option>
+						<option value="British Airways">British Airways</option>
+						<option value="Cathay Pacific Airways">Cathay Pacific Airways</option>
+						<option value="China Airlines">China Airlines</option>
+						<option value="China Eastern Airlines">China Eastern Airlines</option>
+						<option value="Delta Airlines">Delta Airlines</option>
+						<option value="Druk Air">Druk Air</option>
+						<option value="Egypt Air">Egypt Air</option>
+						<option value="El Al Airline">El Al Airline</option>
+						<option value="Emirates Airline">Emirates Airline</option>
+						<option value="Ethiopian Airlines">Ethiopian Airlines</option>
+						<option value="Etihad Airways">Etihad Airways</option>
+						<option value="Gulf Air">Gulf Air</option>
+						<option value="Iran Air">Iran Air</option>
+						<option value="Japan Airline">Japan Airline</option>
+						<option value="Kenya Airways">Kenya Airways</option>
+						<option value="KLM">KLM</option>
+						<option value="Korean Air">Korean Air</option>
+						<option value="Kuwait Airways">Kuwait Airways</option>
+						<option value="Lufthansa">Lufthansa</option>
+						<option value="Mahan Air">Mahan Air</option>
+						<option value="Malaysia Airlines">Malaysia Airlines</option>
+						<option value="Northwest Airlines">Northwest Airlines</option>
+						<option value="Oman Air">Oman Air</option>
+						<option value="Pakistan Airlines">Pakistan Airlines</option>
+						<option value="Qantas Airways">Qantas Airways</option>
+						<option value="Qatar Airways">Qatar Airways</option>
+						<option value="Royal Jordanian Airline">Royal Jordanian Airline</option>
+						<option value="Royal Nepal Airlines">Royal Nepal Airlines</option>
+						<option value="Saudi Arabian Airline">Saudi Arabian Airline</option>
+						<option value="Singapore Airlines">Singapore Airlines</option>
+						<option value="South African Airways">South African Airways</option>
+						<option value="SriLankan Airlines">SriLankan Airlines</option>
+						<option value="Swiss International Airlines">Swiss International Airline</option>
+						<option value="Syrian Arab Airlines">Syrian Arab Airlines</option>
+						<option value="Thai Airways International">Thai Airways International</option>
+						<option value="Turkish Airlines">Turkish Airlines</option>
+						<option value="Uzbekistan Airways">Uzbekistan Airways</option>
+						<option value="Virgin Atlantic Airways">Virgin Atlantic Airways</option>
+						<option value="All Nippon Airways">All Nippon Airways</option>
+						<option value="American Airlines">American Airlines</option>
+						<option value="Continental Airlines">Continental Airlines</option>
+						<option value="Czech Airlines">Czech Airlines</option>
+						<option value="LOT Polish Airlines">LOT Polish Airlines</option>
+						<option value="Philippine Airlines">Philippine Airlines</option>
+						<option value="Scandinavian Airlines">Scandinavian Airlines</option>
+						<option value="Tiger Airways">Tiger Airways</option>
+						<option value="United Airlines">United Airlines</option>
+						<option value="U.S Airways">U.S Airways</option>
+						<option value="VARIG Airlines">VARIG Airlines</option>					
+					</select>
+				<br>
+				<input type="submit" onclick="msg()">
+				 <button type="reset" value="Reset">Reset</button>
+				</fieldset>
+			</form>
+		</main>
+	
+		<aside role="complementary">
+			<h2>Find a Travel Companion</h2>
+			<p>Find a companion for your next flight</p>
+			<table>
+				<tr>
+				<th>From</th>
+				<th>To</th>
+				<th>Date </th>
+				</tr>
+				<tr>
+				<td>Delhi</td>
+				<td>San Fransisco</td>
+				<td>05 Dec 2016</td>
+				</tr>
+				<tr>
+				<td>Mumbai</td>
+				<td>Seattle</td>
+				<td>16 Aug 2016</td>
+				</tr>
+				<tr>
+				<td>New York</td>
+				<td>Hydrabad</td>
+				<td>07 June 2017</td>
+				</tr>
+			</table>
+			<a href="">See all requests</a>
+			<input type="button" value="Post a Request" onclick="msg()">
+			
+			<figure>
+				<img src="images/girl_traveling.jpeg" alt="my image" aria-describedby="figcap">
+				<figcaption id="figcap">Have a nice journey</figcaption>
+			</figure>
+		</aside>
+		<article >
+			<h3>Quick Travel Guide:</h3>
+			<p><Strong>Keep a note of</strong> sample blank <mark>immigration and customs forms</mark>,
+				Checklist of <mark>things to carry</mark>,
+				Process of <mark>check-in, security checks, and baggage claims</mark>,
+				Sample <mark>departure form, US customs form, and I-94 form</mark>,
+				What happens inside the airport and aircraft,
+				US <mark>entry process, including immigration and customs</mark>.</p>
+		</article>
+
+		<footer id="footer" role="contentinfo">
+			<address> For more details, <i>contact</i>
+				<a href="mailto:kapoorva@yahoo.com">Apoorva</a>.
+			</address> 
+			<p><small>copyright&copy;2016. All rights reserved.</small></p>
+		</footer>
+			
+		</div><!-- wrapper closed-->
+	</body>
+</html>

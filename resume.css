@@ -1,0 +1,95 @@
+body{
+	background-size: auto;
+	font-family: sans-serif;
+}
+html, header{
+	background-image:url(images/bkimg.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+#footer{
+	color:#000;
+	font-size:0.90em;
+	font-style:italic;
+	background-color:#d7d7d7;
+	margin:2%;
+}
+.transparentbox {
+	width:90%;
+    margin: 2%;
+	padding: 2%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	border: 1px solid #d7d7d7;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;	
+}
+.intro{
+	font-weight:lighter	;
+	line-height:1.5;
+}
+/*buttons*/
+.button {
+    background-color: white; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 4px 2px;
+    cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	/*button align center */
+	display: block; 
+	margin: auto;
+	/*button stling*/
+	box-shadow: rgb(255, 246, 175) 3px 4px 0px 0px;
+    border-radius: 18px;
+    border: 1px solid rgb(255, 170, 34);
+    color: rgb(51, 51, 51);
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 25px;
+    text-shadow: rgb(255, 238, 102) 0px 1px 0px;
+    /*background: linear-gradient(rgb(255, 236, 100) 5%, rgb(255, 171, 35) 100%) rgb(255, 236, 100);*/
+	margin-bottom:1%;
+}
+
+.button1 {
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button2 {
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #FF9900;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #990099;
+}
+/*table*/
+.projects{
+	text-align:left;
+	border: 0.50px solid brown;
+	margin-top:2%;
+	border-radius: 18px;
+}

@@ -1,0 +1,123 @@
+body{
+	padding:1%;
+	margin: 2%;
+}
+header{
+	background-color: #C1C1C1;
+	background-image: url("flywheel.jpg") ;
+	background-repeat:no-repeat;
+	background-position: center; 
+	background-size: 150%;
+	padding:5%;
+  
+}
+h1{
+	text-align: center;
+	color: #FFF0F5;
+	text-transform: uppercase;
+}
+h2{
+	color:#CC00AA;
+	text-transform: uppercase;
+}
+
+section{
+	background-color:#FFFFF0;
+}
+a{
+	text-align: center;
+	color:#1E1E1E;
+	background-color:#F4F4F4;
+}
+
+
+img{
+	display: block;
+	border: solid 1px #CC00AA;
+	margin: 5%;
+	width: 85%;
+	padding: 1% ;
+
+}
+nav > a{
+	background-color:rgba(255,248,220,0.5);
+	display:inline-block;
+	font-weight:bold;
+	border-radius:50px;
+	text-decoration:none;
+	padding:5px;
+	margin:2%;
+	margin-top:10px;
+	width:200px;
+	}
+nav>a.active{
+	border:3px groove #000000;
+	background-color:#EEA9B8;
+	}
+
+.left{
+	display: inline;
+	width: 25%;
+	float: left;
+	margin: 0 auto;
+	background-color:#CDCDC1	;
+}
+
+.right{
+	display: inline;
+	float: right;
+	width: 73%;
+	padding:1%;
+}
+table{
+	border:1px solid #FFFFFF;
+	border-collapse: collapse;
+	width: 80%;
+	margin: 0% 10%;
+	font-family:"Times New Roman", Georgia, Serif;
+	line-height:51%;
+	
+}
+th {
+	border:1px solid #FFFFFF;
+    background: linear-gradient(#00F5FF,#FFFF00);
+    color: white;
+	height:50px;
+    text-align: center;
+    padding: 2%;
+    text-shadow: 2px 2px 8px #FF0000;
+}
+td {
+	border:1px solid #FFFFFF;
+    text-align: center;
+    padding: 2%;
+	background-color: rgba(180,238,180,0.8);
+	border-radius:2px;
+}
+
+td,th:nth-child(1){
+	text-align:left;
+	}
+
+tr:hover {
+	background-color:rgba(180,238,180,0.5);
+	}
+	
+tr:first-child>th:first-child{
+	-webkit-border-radius:25px 0 0 0 ;
+	border-radius:25px 0 0 0 ;
+}
+tr:first-child>th:last-child{
+	-webkit-border-radius: 0 25px 0 0;
+	border-radius: 0 25px  0 0 ;
+}
+
+tr:last-child>td:first-child {
+	-webkit-border-radius: 0 0 0 25px;
+	border-radius: 0 0 0 25px;	
+}
+
+tr:last-child>td:last-child{
+	-webkit-border-radius: 0 0 25px 0;
+	border-radius: 0 0 25px 0;	
+}

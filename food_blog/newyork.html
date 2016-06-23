@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>NYC City</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="newyork.css" type="text/css">
+</head>
+
+<body>
+
+	<h1>NYC : City that never sleeps</h1>
+
+	<div id="background">
+		<div id="headerimage-box" class="transparent-box">
+			<blockquote class="first">New York - Home to the Empire State Building, Times Square, Statue of Liberty and other iconic sites, New York City is a fast-paced, globally influential center of art, culture, fashion and finance.</blockquote>
+			<blockquote class="second">Home to the Empire State Building, Times Square, Statue of Liberty etc.,</blockquote>
+		</div>
+	</div>
+
+	<div id="timesquare-box" class="subsection-wrapper">
+		<div class="subsection-text">
+			<div class="subsection-title">Times Square:</div>
+			Times Square is a major commercial intersection and neighborhood in Midtown Manhattan, New York City, at the junction of Broadway and Seventh Avenue, and stretching from West 42nd to West 47th Streets. Brightly adorned with billboards and advertisements, Times Square is sometimes referred to as The Crossroads of the World, The Center of the Universe, the heart of The Great White Way, and the "heart of the world". One of the world's busiest pedestrian intersections, it is also the hub of the Broadway Theater District and a major center of the world's entertainment industry
+		</div>
+		<img src="images/timesquare.jpg" alt="Times Square" id="timesquareImg" class="subsection-img right">
+	</div>
+
+	<div id="empirestate-box" class="subsection-wrapper">
+		<img src="images/empirestate.jpg" alt="Empire State Building" id="empirestateImg" class="subsection-img">
+		<div id="left">
+			<div class="subsection-title">Empire State Building:</div>
+			New York's tallest building, the Empire State Building is an Art Deco masterpiece that opened in 1931. Tourists in Manhattan can take the elevator up to the 86th-floor observatory deck and view the streets of Manhattan from nearly 1,500 feet above street level!
+		</div>
+		<div id="right">
+			The Empire State Building is an American cultural icon. It is designed in the distinctive Art Deco style and has been named as one of the Seven Wonders of the Modern World by the American Society of Civil Engineers. Its a must-see attraction in NYC !
+		</div>
+	</div>
+
+
+	<div class="window-size">Window width: <span id="size"></span>px</div>
+	<script>
+		window.onresize = function() {
+			document.getElementById("size").innerHTML = window.innerWidth;
+		};
+	</script>
+
+</body>
+
+</html>

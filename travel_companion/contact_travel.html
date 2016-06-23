@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Travel companion</title>
+		<meta name="description" content="Traveling with a companion or guide to relaxed and excellent travel experince">
+		<meta name="keywords" content="Travel companion, guided travel, relax journey">
+		<meta name ="robots" content="index">
+		<link href="index_travel_style.css" rel="stylesheet" type="text/css" media="screen">
+		<link href='https://fonts.googleapis.com/css?family=Libre+Baskerville:400,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--html5shiv Dealing with IE 6, 7 and 8 (and sometimes 9!): -->
+		<!--[if lt IE 9]>
+		<script src="dist/html5shiv.js"></script>
+		<![endif]-->
+		
+	</head>
+	<body class="gradient">
+	<div id="wrapper">
+		<header id="header" role="banner"><!-- Header HTML5	– Structure	and	Accessibility – WAI-ARIA--> 
+			<nav role="navigation">  	
+				<ul id="nav" class="topnav">
+					<li><a href="index_travel.html.html">Home</a></li>
+					<li><a href="media_travel.html">Media</a></li>
+					<li><a href="#">Blogs</a></li>
+					<li><a href="contact_travel.html">Contact</a></li>
+					<li><a href="#" id="login">Login</a></li>
+					<li class="icon"><a href="javascript:void(0);" style="font-size:15px;" onclick="navFunction()">☰</a></li>
+				</ul> 
+			</nav>
+			
+			<div>
+				<h1>Travel Companion</h1>
+				<h2>Have a happy and relaxed journey!</h2>
+			</div>
+			<div id="aeroplane" class="animation"><img src="images/aeroplane1.png" alt="aeroplane"></div>
+		</header>
+		
+		<main>
+		<section>
+		<h3>If you are curious to hear more about what we can offer, do not hesitate to get in touch. Send us your brief and learn how we work</h3>
+		<form action="#" method="post" autocomplete="on" id="contactform">
+			
+			<fieldset>
+				<legend>personal Information</legend>
+				<label for="firstname">First Name: </label>
+				<input type="text" id="firstname" name="firstname" autofocus required aria-required="true"> *
+				<br>
+				<label for="email">Primary Email: </label>
+				<input type="email" id="email" name="email" required aria-required="true" multiple pattern="^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*\.(([0-9]{1,3})|([a-zA-Z]{2,3})|(aero|coop|info|museum|name))$" placeholder=" foo@bar.info" title="Matches	
+				example@example.com | foo@bar.info | blah@127.0.0.1
+				Non-Matches	
+				broken@@example.com | foo@bar.infp | blah@.nospam.biz"> *
+				<small>for multiple email seperate with commma ","</small>
+				<br>
+				
+				<label for="tel">Phone Number</label>
+				<input type="tel" id="tel" name="tel" placeholder="1222-222-2222" pattern="^(1?(-?\d{3})-?)?(\d{3})(-?\d{4})$" title="Include area code with number(i.e: 1222-222-2222)">
+			</fieldset>
+			<fieldset>
+				<legend>Travel Information</legend>
+				<label for="url">Airline Website: </label>
+				<input type="url" id="url" name="url" title="include http://" placeholder="https:www.c.c// or http://">
+				<br>
+				<label for="date">Date: </label>
+				<input type="date" id="date" name="date">
+				<br>
+				<label for="quantity">Number of passangers:</label>
+				<input type="number" id="quantity" name="quantity" min="1" max="10" value="2" title="between 1 and 10">
+				<br>
+				<label for="points">Points: </label>
+				<input type="range" id="points" name="points" min="0" max="10">	
+				<br>
+				<label for="gender">Preferred companion Gender: </label><br>
+				<input type="radio" id="gender" class="group" name="gender" value="male"  aria-checked="true" checked> Male
+				<input type="radio" id="gender2" class="group" name="gender" value="female"> Female
+				<input type="radio" id="gender3" class="group" name="gender" value="any"> Any
+				<br>
+				<label for="ask">Legal documents for traveling : </label><br>
+				<input type="checkbox" id="ask" class="group" name="ask" value="yes"> passport
+				<input type="checkbox" id="ask2" class="group" name="ask" value="No">  Visa
+				<br>
+				<label for="color">Identification flag Color: </label>
+				<input type="color" id="color" name="color" title="click here to select a color">
+				<br>
+				<label for="promo">Promation Code: </label>
+				<input type="text" id="promo" name="promo" required aria-required="true" pattern="[0-9]{4}-[A-Z]{3}" placeholder="1234-ABC" title="Code must  have four numbers fallowed by hyphen(-)and then three uppercase letters"  > *
+			</fieldset>
+			<input type="submit">
+			</form>
+		</section>
+	</main>
+	<footer role="contentinfo">
+		<address> For more details, <i>contact</i>
+			<a href="mailto:kapoorva@yahoo.com">Apoorva</a>.
+		</address> 
+		<p><small>copyright&copy;2016. All rights reserved.</small></p>
+	</footer>
+	</div>
+	</body>
+</html>
+		

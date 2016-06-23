@@ -1,0 +1,175 @@
+/*Tag Selectors*/
+body{
+	font:100%/1.5em Sans-serif,Verdana, Arial;
+	color:#000;
+	background-color:#fff;
+	margin:0;
+	padding:0;
+	text-align:center;/* for fixing IE8 on windows7*/
+}
+h1{
+	font:bold 1.75em Arial,Gourgia,Times,serif;
+}
+table{
+	border:4px double red;
+	color:#06425C;
+	border-spacing:0;
+	width:100%;
+	margin:0 auto;
+	text-align:left;
+	vertical-align:baseline;
+}
+th{
+	vertical-align:baseline;
+	background: #eee;
+}
+
+header{
+	margin:0 auto;
+	background:#ccc;
+	padding-top:10px;
+}
+content{
+	margin:0 60%;
+	padding:15px;
+	text-align:left;
+}
+span{
+	font:11pt/15pt Verdana,san-serif; 
+}
+footer{
+	font-size:0.7em;
+	color:#000;
+	border-top:1px solid #fff;
+	background:#C7B097;
+	width:100%;
+	margin:0 auto;
+	text-align:center;
+}
+
+/*Descendent Selectors*/
+
+header h1{
+	font:2em "Times New Roman", Times, serif;
+	margin:3%;
+	text-align:center;
+}
+nav{ width:100%;
+	background:pink;
+}
+nav > a{
+	background-color:rgba(255,248,220,0.5);
+	display:inline-block;
+	font-weight:bold;
+	text-decoration:none;
+	padding:1%;
+	margin:25px;
+	width:200px;
+	text-align:center;
+	border-radius:50px;
+	
+}
+#content div{
+	font:bold 14pt Arial,san-serif;
+}
+
+/*ID Selectors*/
+#wrapper{
+	
+	background:#fff;
+	text-align:left;
+	width:90%;
+	margin:5% 6%;
+	border: 4px double #000;
+}
+#positionImg{
+	position: absolute;
+	width: 200px; /* width of image */
+	height: 150px; /* height of image */
+	left: 10px;
+	top: 1px;
+	background: url(images/icon-car.jpg) no-repeat;
+}
+#positionImg2{
+	position:absolute;
+	width:200px;  /* width of image */
+	height:138px;  /* height of image */
+	left: 225px;
+	top: 1200px;
+	background: url(images/fixtire.jpg) no-repeat;
+}
+
+#sidebar{
+	width:25%;
+	float:left;
+	padding:15px 8px 8px 8px;
+	background:#ADD8E6;
+	margin: 0 auto;
+	text-align:left;
+	height:100%;
+}
+#center{
+	width:58%;
+	float:left;
+	padding:15px 8px 8px 8px;
+	background:#ccc;
+	margin: 0 auto;
+	text-align:left;
+}
+#last{
+	width:144px;
+	float:right;
+	padding:15px 8px 8px 8px;
+	margin:0;
+	background:#CC99FF;
+}
+
+/*class selector*/
+.InTable{
+	text-align:center;
+	border:3px solid #000;
+	background:#eee;
+	width:300px;
+}
+.brbreak{
+	clear:both;
+}
+.address{
+	font:11pt/15pt Verdana,san-serif;
+}
+
+.steps{
+	font:bold 1em Gourgia,Times,serif;
+}
+
+/*Pseudo-Class Selectors*/
+/*nav*/
+nav >a:link{
+	color:red;
+}
+nav a:visited {
+	color: green;
+}
+nav a:hover, nav a:focus {
+	text-decoration: underline;	
+}
+
+/*table*/
+td:first-of-type{
+	vertical-align:baseline;
+}
+tr:nth-child(odd) {
+	background: #F2F2F2;
+}
+tr:nth-child(even) {
+	background: #CDBB79;
+}
+tr:hover {
+	color:#fff;
+	background:#98AFC7;
+}
+
+/* Attribute Class Selectors*/
+footer a[target=_blank] {
+    background-color:#ccc ;
+}
