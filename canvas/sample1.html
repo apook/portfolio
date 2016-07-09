@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>Canvas</title>
+		<meta name="description" content="canvas drawing">
+		<meta name="keywords" content="canvas drawing, paint brush">
+		<meta name ="robots" content="index">
+		<link href="canvas_style.css" rel="stylesheet" type="text/css" media="screen">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!--html5shiv Dealing with IE 6, 7 and 8 (and sometimes 9!): -->
+		<!--[if lt IE 9]>
+		<script src="dist/html5shiv.js"></script>
+		<![endif]-->
+<script>
+function drawCanvas() {
+	// Find selected option
+	var radios = document.getElementsByName('option');
+	var selected_radio = "";
+	for (var i = 0, length = radios.length; i < length; i++) {
+		if (radios[i].checked) {
+			selected_radio = radios[i].value;
+			break;
+		}
+    }
+	
+function clearCanvas() {
+	var cnv = document.getElementById('mycanvas');
+	var ctx = cnv.getContext('2d');
+	ctx.clearRect(0, 0, 650, 350);
+  }
+  
+	switch (selected_radio) {
+	case "rectangle":
+		//alert("Drawing: " + selected_radio);
+		drawRectangle();
+		break;
+	case "triangle":
+		//alert("Drawing: " + selected_radio);
+		drawTriangle();
+		break;
+	case "circle":
+		//alert("Drawing: " + selected_radio);
+		drawCircle();
+		break;
+	case "text":
+		//alert("Drawing: " + selected_radio);
+		drawText();
+		break;
+	case "image":
+		//alert("Drawing: " + selected_radio);
+		drawImage();
+		break;
+	case "animation":
+		//alert("Drawing: " + selected_radio);
+		drawAnimation();
+		break;
+
+	default:
+		alert("Please select from options above.");
+		return;
+	}
+}
+
+function drawRectangle() {
+	var cnv = document.getElementById('mycanvas');
+	var ctx = cnv.getContext('2d');
+
+	ctx.fillStyle = "#FF0000";
+	ctx.fillRect(325,200,150,150);
+	ctx.clearRect(350,250,100,80);
+	ctx.strokeRect(375,260,50,70);
+	
+}
+
+
+function drawCircle() {
+	var cnv = document.getElementById('mycanvas');
+	var context = cnv.getContext('2d');
+	
+	context.fillStyle='#FDB813';
+	context.arc(80, 40, 20, 0, Math.PI*2, false);//x, y, size,0 Math.PI*@,false
+	context.fill();
+}
+
+function drawText() {
+	var cnv = document.getElementById('mycanvas');
+	var ctx = cnv.getContext('2d');
+	//filled text
+	ctx.fillStyle='#439';
+	ctx.font = "30px Arial";
+	ctx.fillText('Have nice day!!!', 20 ,150);//text,x,y
+}
+
+function drawImage() {
+	var cnv = document.getElementById('mycanvas');
+	var ctx = cnv.getContext('2d');
+	
+	//Draw images
+	var pict = new Image();
+	pict.src = "images/nature.jpg";
+	pict.onload = function(){
+		ctx.drawImage(pict, 0, 0);
+	}
+
+}
+function drawTriangle() {
+	var cnv = document.getElementById('mycanvas');
+	var ctx = cnv.getContext('2d');
+	//first line amd secomd line is drawn using lineTo amd move to and closePath will join //the end points.
+	ctx.moveTo(400,150);
+	ctx.lineTo(300,200);
+	ctx.lineTo(500,200);
+	ctx.closePath();
+	
+	//Paint the inside
+	ctx.fillStyle='orange';
+	ctx.fill();
+	
+	//drow the outline
+	ctx.lineWidth='5';
+	ctx.strokeStyle='red';
+	ctx.lineJoin='round';// or bevel for limeJoin
+	ctx.stroke();
+}
+function drawAnimation() {
+	var cnv = document.getElementById('mycanvas');
+	var ctx = cnv.getContext('2d');
+
+	
+	//x and y variables determine the position of ball
+	x = 300;
+	y = 200;
+	
+	//change determines how far the ball move during redraw and direction 
+	change = 4;
+	
+	//width and height determines the dimension of box
+	w = 650;
+	h = 350;
+	
+	//function to actually create the ball and anamate
+	function animate(){
+		ctx.fillStyle='lightgray';
+		ctx.fillRect(0,0,w,h);
+		ctx.fillStyle="orange";
+		ctx.beginPath();
+		ctx.arc(x,y,40,0,Math.PI*2,true);
+		ctx.fill();
+			if(x>=550 || x<=15){
+				change = -change;//change-direction
+			}
+			x = x + change;
+		}
+		setInterval(animate, 10);
+
+}
+
+</script>
+</head>
+<body>
+	<header role="banner">
+	<h1>Create your own canvas</h1>
+	<h2>Select the shape one by one stating from Image to animation</h2>
+	</header>
+	<nav id="menu">
+		<input type="radio" name="option" value="image">Image<br>
+		<input type="radio" name="option" value="rectangle">Rectangle<br>
+		<input type="radio" name="option" value="triangle">Triangle<br>
+		<input type="radio" name="option" value="circle">Circle<br>
+		<input type="radio" name="option" value="text">Text<br>
+		<input type="radio" name="option" value="animation">Animation<br>
+		<button type="button" onclick="drawCanvas();"> Draw </button>
+		
+	</nav>
+	
+	<div>
+		<canvas id="mycanvas" width="650" height="350"></canvas>
+	</div>
+	<footer id="footer" role="contentinfo">
+			<p><small>copyright&copy;2016. All rights reserved.</small></p>
+	</footer>
+</body>
+</html>

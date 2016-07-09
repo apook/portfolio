@@ -34,8 +34,8 @@ html,body, header{
 #profileimg img{
 	display:inline-block;
 	position: absolute;
-    left: 75%;
-    top: 55%;
+    left: 65%;
+    top: 30%;
 	border:4px solid black;
 	border-radius:50%;
 }
@@ -50,16 +50,16 @@ html,body, header{
 
  .threed:hover
 {
-        box-shadow:
-                1px 1px #53a7ea,
-                2px 2px #53a7ea,
-                3px 3px #53a7ea;
-        -webkit-transform: translateX(-3px);
-        transform: translateX(-3px);
+	box-shadow:
+		1px 1px brown,
+		2px 2px brown,
+		3px 3px brown;
+	-webkit-transform: translateX(-3px);
+	transform: translateX(-3px);
 }
 .border:hover
 {
-    box-shadow: inset 0 0 0 25px #53a7ea;
+    box-shadow: inset 0 0 0 25px brown;
 }
 /*---------------------------- nav --------------------------------------------------------------------*/
 #nav > a
@@ -78,7 +78,7 @@ nav ul ul {
 	
 /*style up the main navigation menu*/	
 nav ul {
-	background: brown;
+	background: rgba(140,51,16,1);
 	box-shadow: 0px 0px 9px rgba(0,0,0,0.15);
 	padding: 0 20px;
 	border-radius: 10px;  
@@ -97,10 +97,10 @@ nav ul li {
 	float: left;
 }
 	nav ul li:hover {
-		background: #4b545f;
-		background: linear-gradient(top, #4f5964 0%, #5f6975 40%);
-		background: -moz-linear-gradient(top, #4f5964 0%, #5f6975 40%);
-		background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);
+		background: rgba(240,183,161,1);
+		background: linear-gradient(top, rgba(240,183,161,1) 0%, rgba(191,110,78,1) 40%);
+		background: -moz-linear-gradient(top, rgba(240,183,161,1) 0%, rgba(191,110,78,1) 40%);
+		background: -webkit-linear-gradient(top, rgba(240,183,161,1) 0%,rgba(191,110,78,1) 40%);
 	}
 		nav ul li:hover a {
 			color: #fff;
@@ -112,43 +112,112 @@ nav ul li {
 		padding: 25px 40px;
 		text-decoration: none;
 	}
-/*styled up the sub menus */	
-nav ul ul {
-	background: #5f6975;
-	border-radius: 0px;
-	padding: 0;
-	position: absolute;
-	top: 100%;
+/*---------------------------------------- Resume -----------------------------------------------*/
+body{
+	background-size: auto;
+	font-family: sans-serif;
 }
-	nav ul ul li {
-		float: none; 
-		border-top: 1px solid #6b727c;
-		border-bottom: 1px solid #575f6a;
-		position: relative;
-	}
-		nav ul ul li a {
-			padding: 15px 40px;
-			color: #fff;
-		}	
-			nav ul ul li a:hover {
-				background: #4b545f;
-				}
-/*position the sub-sub-menus*/
-nav ul ul ul {
-	position: absolute;
-	left: 100%;
-	top:0;
+html, header{
+	background-image:url(images/bkimg.jpg);
+	background-repeat:no-repeat;
+	background-size:100% 100%;
+}
+#footer{
+	color:#000;
+	font-size:0.90em;
+	font-style:italic;
+	background-color:#d7d7d7;
+	margin:2%;
+}
+.transparentbox {
+	width:90%;
+    margin: 2%;
+	padding: 2%;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.8;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+	border: 1px solid #d7d7d7;
+	-moz-border-radius: 30px;
+	-webkit-border-radius: 30px;
+	border-radius: 30px;	
+}
+.intro{
+	font-weight:lighter	;
+	line-height:1.5;
+}
+/*buttons*/
+.button {
+    background-color: white; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    margin: 4px 2px;
+    cursor: pointer;
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	/*button align center */
+	display: block; 
+	margin: auto;
+	/*button stling*/
+	box-shadow: rgb(255, 246, 175) 3px 4px 0px 0px;
+    border-radius: 18px;
+    border: 1px solid rgb(255, 170, 34);
+    color: rgb(51, 51, 51);
+    font-family: Arial;
+    font-size: 17px;
+    padding: 7px 25px;
+    text-shadow: rgb(255, 238, 102) 0px 1px 0px;
+    /*background: linear-gradient(rgb(255, 236, 100) 5%, rgb(255, 171, 35) 100%) rgb(255, 236, 100);*/
+	margin-bottom:1%;
+}
+
+.button1 {
+    color: black; 
+    border: 2px solid #4CAF50;
+}
+
+.button2 {
+    color: black; 
+    border: 2px solid #008CBA;
+}
+
+.button3 {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #f44336;
+}
+
+.button4 {
+    background-color: white;
+    color: black;
+    border: 2px solid #FF9900;
+}
+
+.button5 {
+    background-color: white;
+    color: black;
+    border: 2px solid #990099;
+}
+/*table*/
+.projects{
+	text-align:left;
+	border: 0.50px solid brown;
+	margin-top:2%;
+	border-radius: 18px;
 }
 /*---------------------------------------- Photo Gallery ----------------------------------------*/
 
 
 #container {
-	width: 600px; 
+	width: 600px;
 	margin: 40px auto;
 }
 
 #container h1 {
-	font: bold 65px/60px Helvetica, Arial, Sans-serif;
+	font: bold 35px/40px Helvetica, Arial, Sans-serif;
 	text-align: center;
 	color:#eee;
 	text-shadow: 0px 2px 6px #333;
@@ -197,10 +266,24 @@ ul.gallery li a {
 		-webkit-transform: rotate(5deg);
  		-moz-transform: rotate(5deg);
 	}
-	
+	ul.gallery li a.pic-7{
+		z-index: 4;
+		-webkit-transform: rotate(14deg);
+ 		-moz-transform: rotate(14deg);
+	}
+	ul.gallery li a.pic-8 {
+		z-index: 2;
+		-webkit-transform: rotate(-12deg);
+ 		-moz-transform: rotate(-12deg);
+	}
+	ul.gallery li a.pic-9 {
+		z-index: 2;
+		-webkit-transform: rotate(14deg);
+ 		-moz-transform: rotate(14deg);
+	}
 	ul.gallery li a:hover {
 		z-index: 10;
-		border:3px solid blue;
+		border:3px solid brown;
 		-moz-box-shadow: 3px 5px 15px #333;
 	}
 /*----------------------------------------- form ---------------------------------------------- */
@@ -236,7 +319,7 @@ form{
 	margin:10%;
 }
 #head{
-	background-color: #4180C5;
+	background-color: rgba(191,110,78,1);
 	text-align: center;
 	padding-top: 12px;
 	margin-top: -11px;
@@ -269,7 +352,7 @@ input[type=submit]{
 	padding: 2%;
 	border-radius:5px;
 	border:1px solid #7ac9b7;
-	background-color: #4180C5;
+	background-color: rgba(191,110,78,1);
 	color: aliceblue;
 	font-size:15px;
 	cursor:pointer;
@@ -289,7 +372,7 @@ input[type=submit]{
 }
 
 input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,textarea:focus {
-	border-color: #4697e4;
+	border-color: brown;
 }
 /* -------------------------------Form validation ----------------------------------------------*/
 /* style your placeholder text you will need to use browser prefixes.*/
@@ -395,10 +478,9 @@ input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,textarea:fo
  
     /* first level */
  
-    #nav > ul
-	{
-        height: auto;
-        display: none;
+    #nav > ul{
+		height: auto;
+		display: none;
         position: absolute;
         left: 0;
         right: 0;
@@ -414,7 +496,7 @@ input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,textarea:fo
 	}
  
     /* second level */
-    #nav li ul
+   /* #nav li ul
 	{
         position: static;
     }
@@ -422,7 +504,7 @@ input[type=text]:focus,input[type=email]:focus,input[type=url]:focus,textarea:fo
 		left: 75%;
 		top: 85%;
 	}
-
+*/
 @media screen and (max-width:600px){
 	
 	/*form*/

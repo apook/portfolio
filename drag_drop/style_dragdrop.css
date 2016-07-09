@@ -1,0 +1,119 @@
+main > div{
+	display:inline;
+}
+body{
+	display:block;
+	background-color:#e0e0e0;
+	font:100%/1.5em Arial, serif;
+	font-weight: 400;
+	color:#000;
+	margin:0;
+	padding:0;
+	max-width:1900px;
+}
+h1{
+	text-align:center;
+	margin-top:8%;
+}
+header {
+	background-image:url(images/Puzzle-background.png);	width:100%;
+	max-width:1023px;
+	height:300px;
+	background-position: center;
+    height: 150px;
+    margin: 0px;
+    }
+
+footer{
+	color:#000;
+	background-color:#d7d7d7;
+}
+
+header, footer{
+    float:left;
+	padding:15px 0;
+	width:100%;
+	text-align:center;
+	margin-bottom:15px;
+}
+footer p{
+	margin:0 auto;
+	padding:0;
+}
+#wrapper{
+	overflow: hidden;
+    width: 80%;
+    margin:0 auto;
+}
+
+p{
+	margin-top:5px;
+	padding:0;
+}
+
+/*nav*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #111;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+/* Type 1*/
+type1 img{
+	float:left;
+	margin:2px 10px;
+	padding:5px;
+	display:inline-block;
+}
+#drop {
+	min-height:200px;
+	width:400px;
+	border:5px solid #000;
+	font:bold 0.875em Verdana,Arial, san-serif;
+	padding:20px;
+	margin:5px;
+	float:right;
+}
+
+
+/* Type 2*/
+#div1, #div2{
+float:left; width:300px;
+height:100px; margin:10px; padding:10px;
+border:3px double #aaaaaa;}
+/*type 3*/
+
+#puzzle h1{
+	margin:0 ;
+	padding:0;
+}
+#puzzle a{
+	display:block;
+	text-align:center;
+	background:#ccc;
+}

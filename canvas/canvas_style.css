@@ -1,0 +1,29 @@
+body {
+	margin: 0px;
+	padding: 0px;
+}
+header{
+	background-color:#ffe6e6;
+}
+button {
+	padding: 10px;
+	margin-top: 5px;
+}
+#menu{
+	width:25%;
+	border:5px double #909;
+	padding:1%;
+	margin:5px auto;
+	float:left;
+}
+#mycanvas{
+	width:70%;
+	background-color:#eee;
+	border:5px double #909;
+	float:right;
+}
+footer{
+	clear:both;
+	background-color:#ffe6e6;
+	
+}
