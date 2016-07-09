@@ -2,7 +2,7 @@ body{
 	background-size: auto;
 	font-family: sans-serif;
 }
-html,body, header{
+header{
 	background-image:url(images/bkimg.jpg);
 	background-repeat:no-repeat;
 	background-size:100% 100%;
@@ -66,7 +66,7 @@ html,body, header{
     {
         display: none;
     }
-/*First hide the sub menus by targeting any ULâ€™s within a UL with the display:none*/
+/*First hide the sub menus by targeting any UL within a UL with the display:none*/
 nav ul ul {
 	display: none;
 }
@@ -148,6 +148,7 @@ html, header{
 }
 /*buttons*/
 .button {
+	width:20%;
     background-color: white; 
     border: none;
     color: white;
@@ -177,6 +178,7 @@ html, header{
 .button1 {
     color: black; 
     border: 2px solid #4CAF50;
+	font-size: 17px;
 }
 
 .button2 {
@@ -214,6 +216,7 @@ html, header{
 #container {
 	width: 600px;
 	margin: 40px auto;
+	background-image:url(images/wood-wallpaper.jpg);
 }
 
 #container h1 {
