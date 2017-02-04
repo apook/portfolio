@@ -1,0 +1,575 @@
+/* font awesome icons
+
+1. Play Icon : color #ffffff	<i class="fa fa-play" aria-hidden="true"></i>
+
+2. Facebook Icon : color #3b5998	<i class="fa fa-facebook-official" aria-hidden="true"></i>
+
+3. Twitter Icon : color  #0084b4	<i class="fa fa-twitter" aria-hidden="true"></i>
+
+4. Google+ Icon : color #d34836		<i class="fa fa-google-plus" aria-hidden="true"></i>
+
+5. Linkedin Icon : color #0077B5 	<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+
+*/
+
+/* patter used
+1.Logo --> blue-sea.jpg
+2.body-background --> sand.jpg Use the background tile from exported images , tile repeat horizontaly and verticaly.
+3. board --> water.jpg
+
+*/
+
+/* Gradients:
+footer:
+ background-image: -moz-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  
+Header:
+
+  background-image: -moz-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  
+}
+
+*/
+
+/*
+Fevicon:
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="theme-color" content="#ffffff">
+*/
+
+/*Header*/
+.Header {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 5333px;
+  height: 6662px;
+  z-index: 61;
+}
+.Our_Designs_____Longboards___Guns___Shortboards {
+  font-size: 60.378px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  -moz-transform: matrix( 1.06797833205313,0,0,1.49061914077432,0,0);
+  -webkit-transform: matrix( 1.06797833205313,0,0,1.49061914077432,0,0);
+  -ms-transform: matrix( 1.06797833205313,0,0,1.49061914077432,0,0);
+  position: absolute;
+  left: 1899.167px;
+  top: 82.642px;
+  z-index: 59;
+}
+.head_bg {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: dotted;
+  background-image: -moz-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  width: 5331px;
+  height: 238px;
+  z-index: 59;
+}
+
+/* Slideshow*/
+
+.Slideshow {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 5333px;
+  height: 6662px;
+  z-index: 56;
+}
+.The_best_surfer_out_there_is_the_one_having_the {
+  font-size: 48px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  -moz-transform: matrix( 2.15776344212489,0,0,2.64808850417986,0,0);
+  -webkit-transform: matrix( 2.15776344212489,0,0,2.64808850417986,0,0);
+  -ms-transform: matrix( 2.15776344212489,0,0,2.64808850417986,0,0);
+  position: absolute;
+  left: 3244.17px;
+  top: 1420.4px;
+  z-index: 55;
+}
+.Prev_btn {
+  background-color: rgb(0, 0, 0);
+  position: absolute;
+  left: 95px;
+  top: 861px;
+  width: 293px;
+  height: 282px;
+  z-index: 54;
+}
+.Next_btn {
+  background-image: url("Next_btn.png");
+  position: absolute;
+  left: 5049px;
+  top: 849px;
+  width: 232px;
+  height: 269px;
+  z-index: 53;
+}
+
+/*Row 1*/
+
+.Row_1 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 5333px;
+  height: 6662px;
+  z-index: 50;
+}
+.From_Blank_to_Board_Building_Custom_Fins_Tails_ {
+  font-size: 90px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  position: absolute;
+  left: 249px;
+  top: 2848.501px;
+  z-index: 49;
+}
+.Featured_News_items_ {
+  font-size: 48px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  -moz-transform: matrix( 4.17892944095592,0,0,1.91586572478018,0,0);
+  -webkit-transform: matrix( 4.17892944095592,0,0,1.91586572478018,0,0);
+  -ms-transform: matrix( 4.17892944095592,0,0,1.91586572478018,0,0);
+  position: absolute;
+  left: 833.255px;
+  top: 1819.9px;
+  z-index: 48;
+}
+.Find_Board {
+  font-size: 48px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  position: absolute;
+  left: 4822px;
+  top: 2919.249px;
+  width: 234px;
+  height: 47px;
+  z-index: 46;
+}
+.Find_the_perfect_board_for_you_ {
+  font-size: 66.555px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  -moz-transform: matrix( 2.42249198626522,0,0,1.36817664899891,0,0);
+  -webkit-transform: matrix( 2.42249198626522,0,0,1.36817664899891,0,0);
+  -ms-transform: matrix( 2.42249198626522,0,0,1.36817664899891,0,0);
+  position: absolute;
+  left: 3646.027px;
+  top: 1864.273px;
+  z-index: 45;
+}
+.Shape_1 {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: dotted;
+  background-color: rgb(235, 216, 152);
+  position: absolute;
+  left: 4793px;
+  top: 2922px;
+  width: 339px;
+  height: 138px;
+  z-index: 44;
+}
+.__Take_our_quiz_to_find_the_board_shape_and_sty {
+  font-size: 48px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  -moz-transform: matrix( 0.99798263176636,0,0,1.98109582404577,0,0);
+  -webkit-transform: matrix( 0.99798263176636,0,0,1.98109582404577,0,0);
+  -ms-transform: matrix( 0.99798263176636,0,0,1.98109582404577,0,0);
+  position: absolute;
+  left: 3107.033px;
+  top: 2916.601px;
+  width: 1645.935px;
+  height: 49px;
+  z-index: 43;
+}
+.OUR_PROCESS_ {
+  font-size: 48px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  font-variant: small-caps;
+  line-height: 1.2;
+  position: absolute;
+  left: 162px;
+  top: 1634.4px;
+  z-index: 41;
+}
+
+/*Row 2*/
+.Row_2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 5333px;
+  height: 6662px;
+  z-index: 39;
+}
+.Layer_3 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 0px;
+  height: 0px;
+  z-index: 38;
+}
+.TEAM_CHRONIC_ {
+  font-size: 22.477px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  font-variant: small-caps;
+  line-height: 1.2;
+  -moz-transform: matrix( 2.81109344785091,0,0,4.00411023072714,0,0);
+  -webkit-transform: matrix( 2.81109344785091,0,0,4.00411023072714,0,0);
+  -ms-transform: matrix( 2.81109344785091,0,0,4.00411023072714,0,0);
+  position: absolute;
+  left: 363.912px;
+  top: 3282.147px;
+  z-index: 37;
+}
+.Hey__this_is_John {
+  font-size: 90px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  position: absolute;
+  left: 4105.203px;
+  top: 4441.501px;
+  z-index: 36;
+}
+.Hi__we_are_mike___Kim {
+  font-size: 90px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  position: absolute;
+  left: 2222.203px;
+  top: 4435.501px;
+  z-index: 35;
+}
+.Hello___I_am_Nick {
+  font-size: 90px;
+  font-family: "AR BERKLEY";
+  color: rgb(255, 255, 255);
+  line-height: 1.2;
+  position: absolute;
+  left: 375.203px;
+  top: 4452.501px;
+  z-index: 34;
+}
+.Browse_Surfboards {
+  font-size: 13px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  line-height: 1.2;
+  -moz-transform: matrix( 6.36984753648814,0.00014624481145,0,9.41566088668664,0,0);
+  -webkit-transform: matrix( 6.36984753648814,0.00014624481145,0,9.41566088668664,0,0);
+  -ms-transform: matrix( 6.36984753648814,0.00014624481145,0,9.41566088668664,0,0);
+  position: absolute;
+  left: 4773.777px;
+  top: 3264.651px;
+  z-index: 33;
+}
+.Meet_the_Team_ {
+  font-size: 13px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  -moz-transform: matrix( 12.8698480288508,0,0,6.23422523481852,0,0);
+  -webkit-transform: matrix( 12.8698480288508,0,0,6.23422523481852,0,0);
+  -ms-transform: matrix( 12.8698480288508,0,0,6.23422523481852,0,0);
+  position: absolute;
+  left: 668.286px;
+  top: 3443.81px;
+  z-index: 32;
+}
+.board_1 {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: dotted;
+  background-color: rgb(0, 174, 239);
+  position: absolute;
+  left: 197px;
+  top: 4438px;
+  width: 1246px;
+  height: 140px;
+  z-index: 31;
+}
+.board_2 {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: dotted;
+  background-color: rgb(0, 174, 239);
+  position: absolute;
+  left: 2033px;
+  top: 4416px;
+  width: 1246px;
+  height: 140px;
+  z-index: 29;
+}
+.board_3 {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: dotted;
+  background-color: rgb(0, 174, 239);
+  position: absolute;
+  left: 3905px;
+  top: 4438px;
+  width: 1246px;
+  height: 140px;
+  z-index: 27;
+}
+
+/*Row 3*/
+
+.Row_3 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 5333px;
+  height: 6662px;
+  z-index: 24;
+}
+.play2 {
+  font-size: 90px;
+  font-family: "FontAwesome";
+  color: rgb(255, 255, 255);
+  font-variant: small-caps;
+  line-height: 1.2;
+  -moz-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  -webkit-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  -ms-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  position: absolute;
+  left: 2645.216px;
+  top: 5238.449px;
+  z-index: 23;
+}
+.play3 {
+  font-size: 90px;
+  font-family: "FontAwesome";
+  color: rgb(255, 255, 255);
+  font-variant: small-caps;
+  line-height: 1.2;
+  -moz-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  -webkit-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  -ms-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  position: absolute;
+  left: 4540.216px;
+  top: 5229.449px;
+  z-index: 22;
+}
+.play1 {
+  font-size: 90px;
+  font-family: "FontAwesome";
+  color: rgb(255, 255, 255);
+  font-variant: small-caps;
+  line-height: 1.2;
+  -moz-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  -webkit-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  -ms-transform: matrix( 9.34462897699735,0,0,5.67348519244069,0,0);
+  position: absolute;
+  left: 808.215px;
+  top: 5274.449px;
+  z-index: 21;
+}
+.Connect_with_us_on_Social_Media__ {
+  font-size: 90px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  font-variant: small-caps;
+  line-height: 1.2;
+  position: absolute;
+  left: 3470px;
+  top: 6162.501px;
+  z-index: 20;
+}
+.Check_out_our_cool_Videos {
+  font-size: 90px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  font-variant: small-caps;
+  line-height: 1.2;
+  position: absolute;
+  left: 197px;
+  top: 4691.501px;
+  z-index: 19;
+}
+
+/* Footer */
+
+.footer {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 5333px;
+  height: 6662px;
+  z-index: 14;
+}
+.copyright_2016_functional_Artistyy {
+  font-size: 62px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  -moz-transform: matrix( 0.96653654695799,0,0,1.6783095645032,0,0);
+  -webkit-transform: matrix( 0.96653654695799,0,0,1.6783095645032,0,0);
+  -ms-transform: matrix( 0.96653654695799,0,0,1.6783095645032,0,0);
+  position: absolute;
+  left: 4261.182px;
+  top: 6027.764px;
+  z-index: 13;
+}
+.Popular_Links:__About_Us_Contact_Us_FAQs_Terms_ {
+  font-size: 60px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  position: absolute;
+  left: 1684.267px;
+  top: 6061.001px;
+  z-index: 12;
+}
+.enter_your_emailid {
+  font-size: 60px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  -moz-transform: matrix( 1.21065819830471,0,0,1.02762586481993,0,0);
+  -webkit-transform: matrix( 1.21065819830471,0,0,1.02762586481993,0,0);
+  -ms-transform: matrix( 1.21065819830471,0,0,1.02762586481993,0,0);
+  position: absolute;
+  left: 391.435px;
+  top: 6219.001px;
+  width: 405.569px;
+  height: 57px;
+  z-index: 11;
+}
+.emailsignup {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: solid;
+  background-color: rgb(0, 174, 239);
+  position: absolute;
+  left: 181px;
+  top: 6205px;
+  width: 890px;
+  height: 119px;
+  z-index: 10;
+}
+.Sign_up_for_or_newsletter_ {
+  font-size: 90px;
+  font-family: "AR BERKLEY";
+  color: rgb(0, 0, 0);
+  line-height: 1.2;
+  position: absolute;
+  left: 161.119px;
+  top: 6075.501px;
+  z-index: 9;
+}
+.Linkedin {
+  font-size: 150px;
+  font-family: "FontAwesome";
+  color: rgb(0, 119, 181);
+  font-variant: small-caps;
+  line-height: 1.2;
+  position: absolute;
+  left: 4329.977px;
+  top: 6341.858px;
+  z-index: 8;
+}
+.Twitter {
+  font-size: 150px;
+  font-family: "FontAwesome";
+  color: rgb(0, 132, 180);
+  font-variant: small-caps;
+  line-height: 1.2;
+  -moz-transform: matrix( 1.55750038244531,0,0,1.08869542186916,0,0);
+  -webkit-transform: matrix( 1.55750038244531,0,0,1.08869542186916,0,0);
+  -ms-transform: matrix( 1.55750038244531,0,0,1.08869542186916,0,0);
+  position: absolute;
+  left: 3778.929px;
+  top: 6365.332px;
+  z-index: 7;
+}
+.Google_ {
+  font-size: 150px;
+  font-family: "FontAwesome";
+  color: rgb(211, 72, 54);
+  font-variant: small-caps;
+  line-height: 1.2;
+  position: absolute;
+  left: 4025.977px;
+  top: 6343.921px;
+  z-index: 6;
+}
+.Facebook {
+  font-size: 150px;
+  font-family: "FontAwesome";
+  color: rgb(59, 89, 152);
+  font-variant: small-caps;
+  line-height: 1.2;
+  -moz-transform: matrix( 2.13437475490829,0,0,1.95912222691599,0,0);
+  -webkit-transform: matrix( 2.13437475490829,0,0,1.95912222691599,0,0);
+  -ms-transform: matrix( 2.13437475490829,0,0,1.95912222691599,0,0);
+  position: absolute;
+  left: 3504.467px;
+  top: 6392.467px;
+  z-index: 5;
+}
+.footer_bg {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: dotted;
+  background-image: -moz-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -webkit-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  background-image: -ms-linear-gradient( 90deg, rgb(3,3,3) 0%, rgb(11,40,64) 10%, rgb(20,74,104) 29%, rgb(128,128,128) 52%, rgb(207,170,134) 75%, rgb(223,208,184) 88%, rgb(238,231,219) 93%, rgb(253,253,254) 100%);
+  position: absolute;
+  left: 0px;
+  top: 5973px;
+  width: 5331px;
+  height: 687px;
+  z-index: 5;
+}
+
+
+/*body background*/
+
+.body_bg {
+  border-width: 1px;
+  border-color: rgb(69, 36, 18);
+  border-style: dotted;
+  background-color: rgb(255, 204, 153);
+  opacity: 0.651;
+  position: absolute;
+  left: -10px;
+  top: 0px;
+  width: 5331px;
+  height: 6660px;
+  z-index: 1;
+}
+
