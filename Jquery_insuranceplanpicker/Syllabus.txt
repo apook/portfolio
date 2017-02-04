@@ -1,0 +1,23 @@
+Instructor: Subhadeep Chatterjee, M.S.
+Course Description
+JQuery is a fast and concise JavaScript library that simplifies tasks for rapid web development. Not only does it provide a common browser API to enable cross-browser support, JQuery also promotes robust, smart and readable JavaScript code for simplicity of use. JQuery is used in web applications irrespective of the language or technology employed on the server side, such as PHP, ASP, JSP, CGI, Python or Ruby. JQuery is widely used in Internet and enterprise companies such as Google, Dell, and Yahoo.
+
+After an overview of the JQuery framework, this course explores the inner workings of document object model (DOM) and HTML content, including traversal, modification, user interactions and event handling. Students learn to leverage the browser event model, perform AJAX requests using JQuery, add effects and animations to web pages, and use JQuery plug-ins. The course also addresses working with CSS (Cascading Style Sheets) and form data.
+
+Through a series of lectures, labs and exercises, students learn the JQuery framework in a hands-on environment. Upon completing this course, students will be able to harness the power of JQuery to build engaging and rich web applications.
+
+Skills Needed: Some knowledge of HTML, CSS, and JavaScript. Must have recent programming experience.
+
+Course Objectives
+At the conclusion of the course, participants should be able to:
+
+Understand DHTML approach with jQuery.
+The difference in client side scripting philosophy between core JavaScript and jQuery
+jQuery as a document query paradigm using JavaScript
+Identify rich behavioral aspect of web application interface.
+Comparative study of achieving rich experience through JavaScript and jQuery with the later being easier to manage and scale
+Organizing rich interaction imagination into possibilities
+Create rich interface through class projects using jQuery.
+Apply earned knowledge in small class projects.
+Recommended Text
+Learning jQuery, 3rd Edition, Chaffer and Swedberg, Packt Publishing, 2011, ISBN-10: 1849516545, ISBN-13: 978-1849516549.

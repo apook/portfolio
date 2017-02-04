@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Final project</title>
+        <link rel="stylesheet" href="jquery-ui-1.10.3.custom.min.css">
+		<!-- add styles and scripts-->
+		<link href="css/jquery-ui.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/style.css">
+		<!--<script src="external/jquery/jquery.js"></script>-->
+		<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+		<script src="js/jquery-ui.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
+
+        <style>
+            html, body, header, footer, section, div, h1, h2, ul, li { margin: 0; padding: 0; font: 12px/18px "Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif; }
+            ul, li { list-style: none; }
+            button { border: 1px solid #aaa; border-radius: 4px; background-color: #eee; font-size: 13px; line-height: 21px; padding: 2px 10px; zoom: 1; overflow: visible; }
+            button.primary { background-color: #58a; color: #fff; border-color: #35688A }
+            .hide { display: none; }
+            .breadcrumb {
+                background: linear-gradient(-90deg, #FCFCFC, #F5F5F5);
+                background: -webkit-linear-gradient(right, #FCFCFC, #F5F5F5);
+                border: 1px solid #F8F8F8; border-radius: 5px;
+                margin: 40px auto 0; max-width: 550px;}
+            .breadcrumb li { display: inline-block;  margin: 10px 0 10px 10px; }
+            .disabledlink { text-decoration: none; color: #888; cursor: default;  }
+            .view {
+                background: -moz-linear-gradient(#ffffff, #e0eeff);
+                background: -webkit-linear-gradient(#ffffff, #e0eeff);
+                border: 2px solid #ccc; border-radius: 5px;
+                display: none; margin: 10px auto; width: 550px; opacity: 0; z-index: 1;}
+            .view header {
+                border-top-left-radius: 5px; border-top-right-radius: 5px;
+                box-shadow: 0 0 4px 0 rgba(90, 90, 90, .5);
+                background-color: #87beea;
+                height: 40px;
+                position: relative;
+                left: -1px;
+                top: -1px;
+                width: 552px;
+            }
+            .view header h1 { position: absolute; font-size: 18px; font-weight: bold; top: 10px; left: 10px; }
+            .view article {
+                background: -moz-linear-gradient(#fff 4%, #f8f8f8 25%, #f3f3f3 86%, #e3e3e3 103%);
+                background: -webkit-linear-gradient(#FdFdFd 4%, #F0F0F0 96%, #E9E9E9);
+                border: 2px solid #bbb; border-radius: 5px;
+                margin: 15px; position: relative;
+                overflow: hidden; z-index: 2;
+            }
+            .view article h2 { font-size: 15px; font-weight: bold; margin: 8px 0; }
+            .view article .content { margin: 10px 10px 40px 10px; }
+            .view article .content-list { margin: 10px 10px 40px 200px; }
+            .view .herospot { float: left; width: 170px; margin: 15px; }
+            .view .hero-item { padding: 10px; border: 1px solid #ccc; border-radius: 5px; font-size: 20px; color: #fff; line-height: 23px; }
+            .view .hero-limited {
+                background: -moz-linear-gradient(#fCc5a8, #d07048 );
+                background: -webkit-linear-gradient(#fCc5a8, #d07048);
+            }
+            .view .hero-comprehensive {
+                background: -moz-linear-gradient(#bCCAF8, #3860B8 );
+                background: -webkit-linear-gradient(#bCCAF8, #3860B8 );
+            }
+            .view article .taskbar { position: absolute; right: 10px; bottom: 10px; }
+            article.form h2 span { margin-left: 10px; }
+            article.form h2 button { float: right; margin-right: 10px; }
+            .form { position: relative; }
+            form li { margin: 15px; }
+            form .key { min-width: 130px; display: inline-block;  text-align: right; }
+            form .input { border-color: #D3D3D3 #F1F1F1 #F1F1F1 #D3D3D3; border-style: solid; border-width: 1px; border-radius: 3px; font-size: 13px; line-height: 18px; padding: 5px; width: 250px; }
+            form span.date { background-color: #fff; display: inline-block; padding: 3px; width: 168px; }
+            form span.date input { border: none; background: url('images/calendar-mini.png') no-repeat right center; padding: 2px; width: 160px;}
+
+			
+
+            #userFormView .taskbar { margin: 0 12px 10px 12px;}
+            #userFormView .taskbar button.primary { float: right; }
+            .elevate {
+                box-shadow: 0 1px 4px rgba(100,100,100,.6); border: 1px solid #eee !important;
+                background: -moz-linear-gradient(#fff 4%, #fdfdfd 25%, #f3f3f3 86%, #e3e3e3 103%) !important;
+                -webkit-transform: scale(1.009);
+                -moz-transform: scale(1.006);
+            }
+            .highlight-error { outline-color: red; outline-style: none; }
+        </style>
+    </head>
+
+    <body>
+
+        <!-- Begin Bread crumb shell -->
+        <div class="breadcrumb">
+            <ul id="pageLink">
+			
+            </ul>
+        </div>
+        <!-- End Bread crumb shell -->
+
+
+        <!-- Begin Home screen -->
+        <section id="homeView" class="view">
+            <header><h1>Available plans</h1></header>
+            <article>
+                <div class="content">
+                    <h2><span>Limited Coverage</span></h2>
+                    Limited coverage plan provides the basic protection,
+                    and may not be adequate. It may cost you less, but the coverage
+                    is limited to pre defined clause of fixed amount of charges.
+                    Must read policy details for benefit and coverage details.
+                </div>
+                <div class="taskbar"><button data-targetview="limitedView">Select</button></div>
+            </article>
+
+            <article>
+                <div class="content">
+                    <h2><span>Comprehensive Coverage</span></h2>
+                    These plans offer much better and flexible coverage.
+                    Most of these plans work like PPO type of 80-20% plan.
+                    Means insured have to pay 20% of the cost for the first
+                    $5,000 per policy period policy pays rest 80%.
+                </div>
+                <div class="taskbar"><button data-targetview="comprehensiveView">Select</button></div>
+            </article>
+        </section>
+        <!-- End Home screen -->
+
+
+        <!-- Begin Limited coverage screen -->
+        <section id="limitedView" class="view">
+            <header><h1>Limited Coverage</h1></header>
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-limited">
+                        Limited Plan&nbsp;A
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Limited Plan A</span></h2>
+                    Limited Plan A provides basic medical coverage for non-US citizens,
+                    who come to the U.S. for business, pleasure, study or to immigrate with
+                    a maximum coverage of $120,000.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView">Select</button></div>
+            </article>
+
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-limited">
+                        Limited Plan&nbsp;B
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Limited Plan A</span></h2>
+                    Limited Plan B provides basic medical coverage for non-US citizens,
+                    who come to the U.S. for business, pleasure, study or to immigrate with
+                    a maximum coverage of $140,000.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView">Select</button></div>
+            </article>
+        </section>
+        <!-- End Limited coverage screen -->
+
+
+        <!-- Begin Comprehensive coverage screen -->
+        <section id="comprehensiveView" class="view">
+            <header><h1>Comprehensive Coverage</h1></header>
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-comprehensive">
+                        Comprehensive Plan&nbsp;A
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Comprehensive Plan A</span></h2>
+                    Plan A offers medical coverage and emergency services to individuals
+                    and families travelling outside their home countries.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView">Select</button></div>
+            </article>
+
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-comprehensive">
+                        Comprehensive Plan&nbsp;B
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Comprehensive Plan B</span></h2>
+                    Plan B offers medical coverage and emergency services to individuals
+                    and families travelling outside their home countries.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView">Select</button></div>
+            </article>
+
+            <article>
+                <div class="herospot">
+                    <div class="hero-item hero-comprehensive">
+                        Comprehensive Plan&nbsp;C
+                    </div>
+                </div>
+                <div class="content-list">
+                    <h2><span>Comprehensive Plan C</span></h2>
+                    Plan C offers medical coverage and emergency services to individuals
+                    and families travelling outside their home countries.
+                </div>
+                <div class="taskbar"><button data-targetview="userFormView">Select</button></div>
+            </article>
+        </section>
+        <!-- End Comprehensive coverage screen -->
+
+
+        <!-- Begin User form -->
+        <section id="userFormView" class="view">
+            <header><h1>Personal Details</h1></header>
+            <div class="taskbar">
+                <button class="addmore">+</button><button id="formSubmit" data-targetview="" class="primary">Submit</button>
+            </div>
+        </section>
+        <!-- End User form -->
+
+
+
+        <!-- Begin template models -->
+        <div id="template" style="display: none;">
+            <article class="form" style="opacity: 1;">
+                <h2><span id="mName"></span><button class="removeform hide">-</button></h2>
+                <form>
+                    <ul>
+                        <li>
+                            <span class="key">Name *</span>
+                            <input type="text" name="name" class="input value" placeholder="Name of insured" required="required"/>
+                        </li>
+                        <li>
+                            <span class="key">Address *</span>
+                            <input type="text" name="address1" class="input value" placeholder="Address of insured" required="required"/>
+                        </li>
+                        <li>
+                            <span class="key"></span>
+                            <input type="text" name="address2" class="input value" placeholder="address contd."/>
+                        </li>
+                        <li>
+                            <span class="key">Start Date *</span>
+                            <span class="input date">
+                                <input type="text" name="startDate" class="input value" placeholder="Start date" required="required"/>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="key">End Date *</span>
+                            <span class="input date">
+                                <input type="text" name="endDate" class="input value" placeholder="End date" required="required"/>
+                            </span>
+                        </li>
+                    </ul>
+                </form>
+            </article>
+        </div>
+        <!-- End template models -->
+	
+	<!-- Begin Thank you screen -->
+        <section id="ThankYou" class="view">
+            <header><h1>confirmation</h1></header>
+            <article>
+                <p id="thanksMsg">Thank You </p>
+				<br><br>
+                <div class="taskbar"><a href="#homeView">Back to Home page</a></div>
+            </article>
+        </section>
+        <!-- End ThankYou screen -->
+
+	<script>
+		// Show me home page: homeView
+		//document.getElementById("homeView").style.display="block";
+		//document.getElementById("homeView").style.opacity="1";
+		
+		var currentSectionId = "homeView";
+		var chosenPlanId = "";
+		var numMembers = 0;
+		
+		$(document).ready(function(){
+			transitionSection("homeView");
+			/*set breadcrumbs*/
+			addToBreadcrumbs("homeView");
+			$(".removeform").removeClass("hide");
+		});
+
+		function transitionSection(to) {
+			// hide current section
+			$("#" + currentSectionId).animate({opacity:1},500).hide();
+			// show next section
+			$("#" + to).show().animate({opacity:1},1000);
+			currentSectionId = to;
+		}
+		
+		function addToBreadcrumbs(sectionId) {
+			// Get header for sectionId
+			
+			var str = getSectionTitle(sectionId) + " >>";
+			var hrefLink = "#" + sectionId;
+			//set link to the breadcrumb
+			$("#pageLink").append("<li> <a href='" +hrefLink+"'>"+str+"</a></li>");
+			$("a[href='"+hrefLink+"']").click(function(){
+			  sectionId = $(this).attr("href").replace('#', ''); // remove "#" from href
+			  $(this).parent().nextAll().remove(); // remove all the following hrefs
+			  transitionSection(sectionId);
+			}); 
+		}
+		
+
+		//helper function to get title for (showing in breadcrumb,choosen plan, etc)
+		function getSectionTitle(sectionId) {
+			return $("#"+ sectionId +" h1").text();
+		}
+		
+		//select buttons
+		$("button").click(function(){
+			nextSectionId = $(this).attr('data-targetview');
+
+			if (typeof nextSectionId === "undefined")
+				/* ignore '+' button here */
+				return;
+
+			if (nextSectionId === "")
+				/* ignore form submit button here */
+				return;
+			// remember the plan chosen
+			if (currentSectionId == "homeView") {
+				chosenPlanId = nextSectionId;
+			}
+			transitionSection(nextSectionId);
+			
+			// Add to breadcrumbs
+			addToBreadcrumbs(nextSectionId);
+			// fist time form viewer
+			if (nextSectionId === 'userFormView' && numMembers === 0) {
+				addFormTemplate();
+			}
+		});
+		
+		
+		
+		function addFormTemplate() {
+			numMembers += 1; //increment the numMembers by 1 every time this function is called
+			newTemplateId = "member"+numMembers;
+			
+			var tmpl = $('#template').clone();
+			tmpl.attr("id", newTemplateId);
+			$("#userFormView .taskbar").before(tmpl);
+			tmpl.css("display", "block");
+			
+			//add calender
+			startDatePicker(newTemplateId);
+			$("#" + newTemplateId +" .form"+ " h2"+" span").html("Member" +" "+ numMembers);
+			
+			//- button - remove cloned form and change member name and id accordingly
+			$("#" + newTemplateId + " .removeform").attr("removeCloneId",newTemplateId);
+			$("#" + newTemplateId + " .removeform").click(function() {
+				var removeSectionId = $(this).attr('removeCloneId');
+				
+				var membNo = parseInt(removeSectionId.substring(6), 10);
+				//remove form
+				$("#"+removeSectionId).remove();
+				
+				//change member names
+				for(var i = membNo + 1; i <= numMembers; i++ ){
+					var memberName = "Member " + (i - 1);
+					var memberId = "member" + (i - 1);
+					$("#member" + i + " .form h2 span").html(memberName);
+					$("#member" + i).attr("id", memberId);
+				}
+				numMembers = numMembers-1;
+			});
+		}
+
+		
+		// "+" button
+		$(".addmore").click(function() {
+			addFormTemplate();
+			
+		});
+		
+		//"-" button
+		
+		//click submit
+		$("#formSubmit").click(function(){
+			checkValidation();
+		});
+		
+		//validation of input fields
+		function checkValidation(){
+			var name = $( "#userFormView .value" ).val();
+			var errorFound = 0;
+			$( "#userFormView .value" ).each(function() {
+				if ($(this).attr('required') == "required") {
+				
+					if ($(this).val() == "") {
+						$(this).css("background-color", "pink");
+						errorFound = 1;
+					} else {
+						$(this).css("background-color", "white");
+					}
+				}
+			});
+			
+			if (errorFound == 1) {
+				alert("Please specify all the required fields.");
+				return;
+			}
+			showThankYou(name); 
+		}
+		
+		
+		//Thank you message
+		function showThankYou(name) {
+			var thankYouMessage = "Thank you " + name + " for choosing " +
+				getSectionTitle(chosenPlanId) + " plan.";
+			//alert(thankYouMessage);
+			transitionSection("ThankYou");
+			addToBreadcrumbs("ThankYou");
+			$(thanksMsg).html(thankYouMessage);
+		
+		}
+		
+	
+	//Datepicker code : https://jqueryui.com/datepicker/#date-range
+	
+	  function startDatePicker(newTemplateId) {
+	  //alert("date");
+		var dateFormat = "mm/dd/yy",
+		  from = $( "#"+ newTemplateId + " input[name=startDate]" )
+			.datepicker({
+			  defaultDate: "+1w",
+			  changeMonth: true,
+			  numberOfMonths: 1
+			})
+			.on( "change", function() {
+			  to.datepicker( "option", "minDate", getDate( this ) );
+			}),
+		  to = $( "#" + newTemplateId + " input[name=endDate]" ).datepicker({
+			defaultDate: "+1w",
+			changeMonth: true,
+			numberOfMonths: 1
+		  })
+		  .on( "change", function() {
+			from.datepicker( "option", "maxDate", getDate( this ) );
+		  });
+	 
+		function getDate( element ) {
+		  var date;
+		  try {
+			date = $.datepicker.parseDate( dateFormat, element.value );
+		  } catch( error ) {
+			date = null;
+		  }
+	 
+		  return date;
+		}
+	  }
+	</script>
+    </body>
+
+
+
+
+</html>

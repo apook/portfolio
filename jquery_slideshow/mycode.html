@@ -1,0 +1,104 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Assignment 2</title>
+        <style>
+            body {
+                min-height: 460px; background-color: #1c1c1c;
+                font: 14px Arial, Helvetica;
+            }
+			#viewPort div{display:inline-block;display:none; }
+            #carousel {
+                margin: auto; margin-top: 40px; padding: 5px;
+                width: 600px; height: 450px;
+                border:  1px solid #5c5c5c; border-radius: 5px;
+                -moz-box-shadow: 0px 0px 25px rgba(255,255,255,.5);
+                position: relative;
+            }
+            #keyPad {
+                width: 598px; height: 50px;
+                position: absolute; bottom: 5px; left:5px;
+                border: 1px solid #3f3f3f;
+                border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; background-color: #1f1f1f;
+				display:inline-block;
+            }
+            #navBar { text-align: center; margin-top: 15px; color: #5c5c5c; }
+            #navBar a { color: #5c5c5c; text-decoration: none; text-shadow: -1px -1px #000; margin: 0 15px; cursor:pointer; }
+			
+        </style>
+    </head>
+    <body>
+        <div id="carousel">
+            <div id="viewPort" >
+			<div style="display:inline-block;">
+               <img src="images/image1.jpg" alt="bay city" name="img1" >
+			</div>
+			<div>  
+			   <img src="images/image2.jpg" alt="bay city" name="img2" >
+			</div>
+			<div>
+			   <img src="images/image3.jpg" alt="bay city" name="img3" >
+			</div>
+			<div>
+			   <img src="images/image4.jpg" alt="bay city" name="img4" >
+            </div>
+			</div>
+			
+            <div id="keyPad">
+                <div id="navBar">
+					<a href="#" id="prev">Prev</a>|
+					<a href="#" id="next">Next</a>
+				</div>
+            </div>
+        </div>
+    </body>
+	<!--
+		Create a photo carousel.
+		Add template within viewPort. Use attached four images.
+		Add JavaScript and jQuery to add behavior to the 'Prev' and 'Next' link.
+	-->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> 
+
+		<script>
+			var currentImageIndex = 0,
+			images = $('#viewPort div'), /*return a list of #viewPort divs with images inside of them*/
+			totalImages = images.length;
+
+			function cycleImages() {
+			  var image = $('#viewPort div').eq(currentImageIndex); /*eq method provided by jQuery takes an integer, and will target the first item returned by $('#viewPort div') that matches the integer. */
+			  images.hide();
+			  image.css('display','inline-block');
+			}
+
+			var autoSlide = setInterval(function() {
+			$('#viewPort div').fadeIn("slow");
+			  currentImageIndex += 1;
+			  if (currentImageIndex > totalImages - 1) {
+				currentImageIndex = 0;
+			  }
+			  $('#viewPort div').fadeOut("slow");
+			  cycleImages();
+			}, 3000);
+
+			$('#next').click(function() {
+			  clearInterval(autoSlide);
+			  currentImageIndex += 1;
+			  if (currentImageIndex > totalImages - 1) {
+				currentImageIndex= 0;
+			  }
+			  cycleImages();
+			});
+
+			$("#prev").click(function() {
+			  clearInterval(autoSlide);
+			  currentImageIndex -= 1;
+			  if (currentImageIndex < 0) {
+				currentImageIndex = totalImages - 1;
+			  }
+			  cycleImages();
+			});
+		</script>
+</html>
+
+
+
