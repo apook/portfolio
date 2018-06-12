@@ -485,3 +485,12 @@ footer .footer-below {
 .para{
 	text-align:justify;
 }
+.workSample{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 5%;
+    border: 1px solid #80808047;
+    margin: auto;
+    text-align: center;
+}
